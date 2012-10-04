@@ -1,0 +1,70 @@
+// colors
+@bar-range:        #ececf0;
+@bar-target:       #b0c4de;
+@bar-indicator:    #0480be;
+@current-sample:   red;
+@guideline-50pct:  silver;
+@guideline-25pct:  lightgray;
+
+// mixins
+.bold(@size)       { font-size: @size; font-weight: bold; }
+
+// styles
+.icon-small        { margin-left: 0.3em}
+.icon-bullhorn     { color: #8b008b; }
+.icon-globe        { color: #195f91; }
+
+.bullet {
+  .target          { fill: @bar-target; }
+  .actual, .mark   { fill: @bar-indicator; }
+  .range           { fill: @bar-range; }
+}
+
+
+.barchart {
+
+  .absences,
+  .detentions      { fill: @bar-indicator; }
+
+  .tardies,
+  .referrals       { fill: @bar-target; }
+
+  .label,
+  .label.absences,
+  .label.tardies   { fill: white; }
+
+  .label           { .bold(10px); }
+
+  .pct50           { fill: @guideline-50pct; }
+}
+
+.sparkline {
+  .current         { fill: @current-sample; }
+  .past            { fill: @bar-indicator; }
+  .pct50           { fill: @guideline-50pct; }
+  .pct25           { fill: @guideline-25pct; }
+}
+.interjection      { color: @bar-indicator; }
+
+#stats             { margin-top: 1em}
+#stats > div       { margin-top: .3em}
+#stats .label      { .bold(9pt); }
+
+#lastClass         { font-size: 11pt; }
+
+tr:hover           {
+  background-color: #fffeb8;
+  color: black;
+}
+
+.studentName, .grades, .assignments, .attendance, .disciplinary, .standardizedTests {
+  padding-right: 1em;
+}
+
+.standardizedTests, .assignments { color: black; }
+
+body {
+  font-family: Segoe, Tahoma, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #f8f8ff;
+  color: #606060;
+}

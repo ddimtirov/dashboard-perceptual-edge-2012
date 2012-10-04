@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/resources" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="groovy-2.0.1" level="application" />
+    <orderEntry type="module-library">
+      <library name="Grab:poi-3.8.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/org.apache.poi/poi/jars/poi-3.8.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../downloaded/poi-3.8-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:commons-codec-1.5.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/commons-codec/commons-codec/jars/commons-codec-1.5.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="d3.v2" level="application" />
+    <orderEntry type="module-library">
+      <library name="Grab:vertx-lang-groovy-1.2.3.final.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/org.vert-x/vertx-lang-groovy/jars/vertx-lang-groovy-1.2.3.final.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:vertx-core-1.2.3.final.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/org.vert-x/vertx-core/jars/vertx-core-1.2.3.final.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:slf4j-api-1.6.2.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/org.slf4j/slf4j-api/jars/slf4j-api-1.6.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:netty-3.5.0.Final.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/io.netty/netty/bundles/netty-3.5.0.Final.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:log4j-1.2.16.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/log4j/log4j/bundles/log4j-1.2.16.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:jackson-core-asl-1.9.4.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/org.codehaus.jackson/jackson-core-asl/jars/jackson-core-asl-1.9.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:jackson-mapper-asl-1.9.4.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/org.codehaus.jackson/jackson-mapper-asl/jars/jackson-mapper-asl-1.9.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>
+

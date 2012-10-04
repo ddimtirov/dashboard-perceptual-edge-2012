@@ -1,0 +1,1858 @@
+{
+    "generator": "Run HttpServer.groovy and download http://localhost:8080/data-dashboard.json",
+    "aggregated": {
+        "thisClass": {
+            "median": 0.774,
+            "distribution": [
+                {
+                    "score": "<=50%",
+                    "populationPct": 0.096
+                },
+                {
+                    "score": "51-60%",
+                    "populationPct": 0.097
+                },
+                {
+                    "score": "61-70%",
+                    "populationPct": 0.224
+                },
+                {
+                    "score": "71-80%",
+                    "populationPct": 0.247
+                },
+                {
+                    "score": "81-90%",
+                    "populationPct": 0.233
+                },
+                {
+                    "score": "91-100%",
+                    "populationPct": 0.103
+                }
+            ]
+        },
+        "otherClasses": {
+            "median": 0.742,
+            "distribution": [
+                {
+                    "score": "<=50%",
+                    "populationPct": 0.093
+                },
+                {
+                    "score": "51-60%",
+                    "populationPct": 0.104
+                },
+                {
+                    "score": "61-70%",
+                    "populationPct": 0.231
+                },
+                {
+                    "score": "71-80%",
+                    "populationPct": 0.254
+                },
+                {
+                    "score": "81-90%",
+                    "populationPct": 0.222
+                },
+                {
+                    "score": "91-100%",
+                    "populationPct": 0.096
+                }
+            ]
+        },
+        "district": {
+            "median": 0.719,
+            "distribution": [
+                {
+                    "score": "<=50%",
+                    "populationPct": 0.116
+                },
+                {
+                    "score": "51-60%",
+                    "populationPct": 0.114
+                },
+                {
+                    "score": "61-70%",
+                    "populationPct": 0.254
+                },
+                {
+                    "score": "71-80%",
+                    "populationPct": 0.234
+                },
+                {
+                    "score": "81-90%",
+                    "populationPct": 0.196
+                },
+                {
+                    "score": "91-100%",
+                    "populationPct": 0.086
+                }
+            ]
+        }
+    },
+    "yesterday": {
+        "absences": 2,
+        "tardies": 1
+    },
+    "students": [
+        [
+            {
+                "name": "Bae Kim",
+                "englishLanguageProficiencyLacking": true,
+                "specialEdStatus": false,
+                "lateAssignments": 3
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.39,
+                    "9th": 0.71,
+                    "8th": 0.74,
+                    "7th": 0.78,
+                    "6th": 0.75
+                }
+            },
+            {
+                "currentCourse": "F",
+                "studentGoal": "C",
+                "previousCourse": "C"
+            },
+            {
+                "scores": [
+                    0.46,
+                    0.68,
+                    0.71,
+                    0.51,
+                    0.61
+                ],
+                "lateCount": 3.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 2.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 3.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 8.0,
+                    "dates": [
+                        "2012/01/09",
+                        "2012/01/12",
+                        "2012/01/30",
+                        "2012/02/21",
+                        "2012/02/29",
+                        "2012/04/11",
+                        "2012/04/23",
+                        "2012/04/27"
+                    ]
+                },
+                "absences": {
+                    "count": 6.0,
+                    "dates": [
+                        "2012/02/16",
+                        "2012/03/05",
+                        "2012/03/19",
+                        "2012/03/30",
+                        "2012/04/09",
+                        "2012/04/17"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Frederick Chandler",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 2
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.41,
+                    "9th": 0.62,
+                    "8th": 0.64,
+                    "7th": 0.67,
+                    "6th": 0.51
+                }
+            },
+            {
+                "currentCourse": "F",
+                "studentGoal": "C",
+                "previousCourse": "C"
+            },
+            {
+                "scores": [
+                    0.71,
+                    0.65,
+                    0.0,
+                    0.6,
+                    0.68
+                ],
+                "lateCount": 2.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 1.0,
+                    "lastTermCount": 1.0
+                },
+                "referrals": {
+                    "thisTermCount": 2.0,
+                    "lastTermCount": 2.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 0.0,
+                    "dates": [
+                        
+                    ]
+                },
+                "absences": {
+                    "count": 0.0,
+                    "dates": [
+                        
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Alison Perry",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.85,
+                    "9th": 0.89,
+                    "8th": 0.84,
+                    "7th": 0.82,
+                    "6th": 0.85
+                }
+            },
+            {
+                "currentCourse": "B",
+                "studentGoal": "A",
+                "previousCourse": "A"
+            },
+            {
+                "scores": [
+                    0.87,
+                    0.91,
+                    0.98,
+                    0.78,
+                    0.91
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 0.0,
+                    "dates": [
+                        
+                    ]
+                },
+                "absences": {
+                    "count": 3.0,
+                    "dates": [
+                        "2012/02/09",
+                        "2012/03/05",
+                        "2012/03/06"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Anthony Harper",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": true,
+                "lateAssignments": 1
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.62,
+                    "9th": 0.67,
+                    "8th": 0.7,
+                    "7th": 0.73,
+                    "6th": 0.79
+                }
+            },
+            {
+                "currentCourse": "D",
+                "studentGoal": "C",
+                "previousCourse": "C"
+            },
+            {
+                "scores": [
+                    0.65,
+                    0.79,
+                    0.55,
+                    0.7000000000000001,
+                    0.78
+                ],
+                "lateCount": 1.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 0.0,
+                    "dates": [
+                        
+                    ]
+                },
+                "absences": {
+                    "count": 3.0,
+                    "dates": [
+                        "2012/02/15",
+                        "2012/03/13",
+                        "2012/04/09"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Blaine Harper",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.71,
+                    "9th": 0.68,
+                    "8th": 0.73,
+                    "7th": 0.74,
+                    "6th": 0.69
+                }
+            },
+            {
+                "currentCourse": "C",
+                "studentGoal": "B",
+                "previousCourse": "D"
+            },
+            {
+                "scores": [
+                    0.6900000000000001,
+                    0.73,
+                    0.77,
+                    0.81,
+                    0.74
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 1.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 1.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 1.0,
+                    "dates": [
+                        "2012/03/19"
+                    ]
+                },
+                "absences": {
+                    "count": 4.0,
+                    "dates": [
+                        "2012/01/09",
+                        "2012/01/12",
+                        "2012/02/15",
+                        "2012/04/09"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Brian Francis",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 2
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.67,
+                    "9th": 0.66,
+                    "8th": 0.71,
+                    "7th": 0.78,
+                    "6th": 0.81
+                }
+            },
+            {
+                "currentCourse": "D",
+                "studentGoal": "C",
+                "previousCourse": "C"
+            },
+            {
+                "scores": [
+                    0.5700000000000001,
+                    0.66,
+                    0.7000000000000001,
+                    0.62,
+                    0.6900000000000001
+                ],
+                "lateCount": 2.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 3.0,
+                    "dates": [
+                        "2012/01/11",
+                        "2012/02/09",
+                        "2012/04/17"
+                    ]
+                },
+                "absences": {
+                    "count": 9.0,
+                    "dates": [
+                        "2012/01/10",
+                        "2012/01/17",
+                        "2012/01/18",
+                        "2012/01/19",
+                        "2012/02/22",
+                        "2012/02/23",
+                        "2012/03/28",
+                        "2012/04/09",
+                        "2012/04/20"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Christopher Murphy",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 1
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.55,
+                    "9th": 0.49,
+                    "8th": 0.51,
+                    "7th": 0.58,
+                    "6th": 0.77
+                }
+            },
+            {
+                "currentCourse": "D",
+                "studentGoal": "C",
+                "previousCourse": "F"
+            },
+            {
+                "scores": [
+                    0.55,
+                    0.73,
+                    0.7000000000000001,
+                    0.72,
+                    0.78
+                ],
+                "lateCount": 1.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 3.0,
+                    "dates": [
+                        "2012/02/09",
+                        "2012/03/06",
+                        "2012/03/30"
+                    ]
+                },
+                "absences": {
+                    "count": 2.0,
+                    "dates": [
+                        "2012/01/20",
+                        "2012/04/30"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Fariah Jackson",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.84,
+                    "9th": 0.81,
+                    "8th": 0.81,
+                    "7th": 0.83,
+                    "6th": 0.8
+                }
+            },
+            {
+                "currentCourse": "B",
+                "studentGoal": "A",
+                "previousCourse": "B"
+            },
+            {
+                "scores": [
+                    0.89,
+                    0.92,
+                    0.85,
+                    0.84,
+                    0.88
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 0.0,
+                    "dates": [
+                        
+                    ]
+                },
+                "absences": {
+                    "count": 2.0,
+                    "dates": [
+                        "2012/02/07",
+                        "2012/03/22"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Fiona Reeves",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": true,
+                "lateAssignments": 3
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.47,
+                    "9th": 0.41,
+                    "8th": 0.52,
+                    "7th": 0.47,
+                    "6th": 0.5
+                }
+            },
+            {
+                "currentCourse": "D",
+                "studentGoal": "C",
+                "previousCourse": "F"
+            },
+            {
+                "scores": [
+                    0.61,
+                    0.6900000000000001,
+                    0.54,
+                    0.75,
+                    0.64
+                ],
+                "lateCount": 3.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 1.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 1.0,
+                    "lastTermCount": 1.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 0.0,
+                    "dates": [
+                        
+                    ]
+                },
+                "absences": {
+                    "count": 8.0,
+                    "dates": [
+                        "2012/01/19",
+                        "2012/02/07",
+                        "2012/02/08",
+                        "2012/02/09",
+                        "2012/03/14",
+                        "2012/04/17",
+                        "2012/04/19",
+                        "2012/04/20"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "George Smith",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 1
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.76,
+                    "9th": 0.71,
+                    "8th": 0.74,
+                    "7th": 0.73,
+                    "6th": 0.71
+                }
+            },
+            {
+                "currentCourse": "C",
+                "studentGoal": "B",
+                "previousCourse": "C"
+            },
+            {
+                "scores": [
+                    0.78,
+                    0.72,
+                    0.81,
+                    0.75,
+                    0.76
+                ],
+                "lateCount": 1.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 1.0
+                },
+                "referrals": {
+                    "thisTermCount": 1.0,
+                    "lastTermCount": 1.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 3.0,
+                    "dates": [
+                        "2012/01/13",
+                        "2012/04/19",
+                        "2012/04/30"
+                    ]
+                },
+                "absences": {
+                    "count": 1.0,
+                    "dates": [
+                        "2012/03/08"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Lawrence Parker",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.8,
+                    "9th": 0.79,
+                    "8th": 0.78,
+                    "7th": 0.83,
+                    "6th": 0.84
+                }
+            },
+            {
+                "currentCourse": "B",
+                "studentGoal": "A",
+                "previousCourse": "B"
+            },
+            {
+                "scores": [
+                    0.81,
+                    0.84,
+                    0.88,
+                    0.89,
+                    0.91
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 1.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 1.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 0.0,
+                    "dates": [
+                        
+                    ]
+                },
+                "absences": {
+                    "count": 0.0,
+                    "dates": [
+                        
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Regan Potrero",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 1
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.67,
+                    "9th": 0.7,
+                    "8th": 0.68,
+                    "7th": 0.71,
+                    "6th": 0.73
+                }
+            },
+            {
+                "currentCourse": "C",
+                "studentGoal": "B",
+                "previousCourse": "C"
+            },
+            {
+                "scores": [
+                    0.76,
+                    0.79,
+                    0.78,
+                    0.89,
+                    0.72
+                ],
+                "lateCount": 1.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 2.0,
+                    "dates": [
+                        "2012/01/25",
+                        "2012/02/01"
+                    ]
+                },
+                "absences": {
+                    "count": 1.0,
+                    "dates": [
+                        "2012/03/06"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Sarah Jameson",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 1
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.78,
+                    "9th": 0.85,
+                    "8th": 0.89,
+                    "7th": 0.92,
+                    "6th": 0.91
+                }
+            },
+            {
+                "currentCourse": "B",
+                "studentGoal": "A",
+                "previousCourse": "A"
+            },
+            {
+                "scores": [
+                    0.87,
+                    0.8300000000000001,
+                    0.92,
+                    0.9,
+                    0.89
+                ],
+                "lateCount": 1.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 1.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 1.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 4.0,
+                    "dates": [
+                        "2012/01/19",
+                        "2012/02/08",
+                        "2012/03/06",
+                        "2012/04/23"
+                    ]
+                },
+                "absences": {
+                    "count": 3.0,
+                    "dates": [
+                        "2012/02/07",
+                        "2012/03/27",
+                        "2012/04/17"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Amala Singh",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.91,
+                    "9th": 0.94,
+                    "8th": 0.93,
+                    "7th": 0.89,
+                    "6th": 0.87
+                }
+            },
+            {
+                "currentCourse": "A",
+                "studentGoal": "A",
+                "previousCourse": "A"
+            },
+            {
+                "scores": [
+                    0.9,
+                    0.87,
+                    0.93,
+                    0.9,
+                    0.99
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 1.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 1.0,
+                    "dates": [
+                        "2012/01/11"
+                    ]
+                },
+                "absences": {
+                    "count": 4.0,
+                    "dates": [
+                        "2012/01/30",
+                        "2012/02/17",
+                        "2012/02/23",
+                        "2012/02/24"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Britta Jones",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.85,
+                    "9th": 0.81,
+                    "8th": 0.82,
+                    "7th": 0.78,
+                    "6th": 0.75
+                }
+            },
+            {
+                "currentCourse": "B",
+                "studentGoal": "B",
+                "previousCourse": "B"
+            },
+            {
+                "scores": [
+                    0.81,
+                    0.87,
+                    0.79,
+                    0.8,
+                    0.77
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 1.0,
+                    "dates": [
+                        "2012/01/11"
+                    ]
+                },
+                "absences": {
+                    "count": 2.0,
+                    "dates": [
+                        "2012/02/01",
+                        "2012/04/13"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "David Chenowith",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.8,
+                    "9th": 0.76,
+                    "8th": 0.82,
+                    "7th": 0.84,
+                    "6th": 0.85
+                }
+            },
+            {
+                "currentCourse": "B",
+                "studentGoal": "B",
+                "previousCourse": "C"
+            },
+            {
+                "scores": [
+                    0.81,
+                    0.88,
+                    0.92,
+                    0.84,
+                    0.97
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 1.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 5.0,
+                    "dates": [
+                        "2012/01/31",
+                        "2012/02/15",
+                        "2012/02/22",
+                        "2012/04/12",
+                        "2012/04/23"
+                    ]
+                },
+                "absences": {
+                    "count": 3.0,
+                    "dates": [
+                        "2012/01/24",
+                        "2012/01/25",
+                        "2012/02/21"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Hannah Li",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.94,
+                    "9th": 0.91,
+                    "8th": 0.94,
+                    "7th": 0.93,
+                    "6th": 0.95
+                }
+            },
+            {
+                "currentCourse": "A",
+                "studentGoal": "A",
+                "previousCourse": "A"
+            },
+            {
+                "scores": [
+                    0.91,
+                    0.93,
+                    0.98,
+                    0.89,
+                    0.9400000000000001
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 2.0,
+                    "dates": [
+                        "2012/01/25",
+                        "2012/03/19"
+                    ]
+                },
+                "absences": {
+                    "count": 1.0,
+                    "dates": [
+                        "2012/01/24"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Holly Norton",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.98,
+                    "9th": 0.99,
+                    "8th": 0.97,
+                    "7th": 0.97,
+                    "6th": 0.96
+                }
+            },
+            {
+                "currentCourse": "A",
+                "studentGoal": "A",
+                "previousCourse": "A"
+            },
+            {
+                "scores": [
+                    0.98,
+                    1.0,
+                    0.97,
+                    0.9500000000000001,
+                    1.0
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 2.0,
+                    "dates": [
+                        "2012/02/21",
+                        "2012/03/09"
+                    ]
+                },
+                "absences": {
+                    "count": 0.0,
+                    "dates": [
+                        
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Jaime Goss",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.82,
+                    "9th": 0.81,
+                    "8th": 0.78,
+                    "7th": 0.83,
+                    "6th": 0.84
+                }
+            },
+            {
+                "currentCourse": "B",
+                "studentGoal": "B",
+                "previousCourse": "B"
+            },
+            {
+                "scores": [
+                    0.88,
+                    0.81,
+                    0.78,
+                    0.85,
+                    0.86
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 1.0
+                },
+                "referrals": {
+                    "thisTermCount": 1.0,
+                    "lastTermCount": 1.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 0.0,
+                    "dates": [
+                        
+                    ]
+                },
+                "absences": {
+                    "count": 4.0,
+                    "dates": [
+                        "2012/02/08",
+                        "2012/03/05",
+                        "2012/04/09",
+                        "2012/03/12"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "James Martin",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 1
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.71,
+                    "9th": 0.74,
+                    "8th": 0.75,
+                    "7th": 0.75,
+                    "6th": 0.73
+                }
+            },
+            {
+                "currentCourse": "C",
+                "studentGoal": "C",
+                "previousCourse": "C"
+            },
+            {
+                "scores": [
+                    0.71,
+                    0.74,
+                    0.6900000000000001,
+                    0.79,
+                    0.75
+                ],
+                "lateCount": 1.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 2.0,
+                    "dates": [
+                        "2012/01/26",
+                        "2012/03/21"
+                    ]
+                },
+                "absences": {
+                    "count": 4.0,
+                    "dates": [
+                        "2012/01/18",
+                        "2012/04/26",
+                        "2012/04/27",
+                        "2012/04/30"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "James Snow",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.91,
+                    "9th": 0.86,
+                    "8th": 0.9,
+                    "7th": 0.92,
+                    "6th": 0.9
+                }
+            },
+            {
+                "currentCourse": "A",
+                "studentGoal": "A",
+                "previousCourse": "B"
+            },
+            {
+                "scores": [
+                    0.91,
+                    0.9400000000000001,
+                    0.89,
+                    0.99,
+                    0.97
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 0.0,
+                    "dates": [
+                        
+                    ]
+                },
+                "absences": {
+                    "count": 1.0,
+                    "dates": [
+                        "2012/02/09"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Jose Domingo",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.84,
+                    "9th": 0.9,
+                    "8th": 0.91,
+                    "7th": 0.89,
+                    "6th": 0.93
+                }
+            },
+            {
+                "currentCourse": "B",
+                "studentGoal": "B",
+                "previousCourse": "A"
+            },
+            {
+                "scores": [
+                    0.87,
+                    0.84,
+                    0.89,
+                    0.88,
+                    0.84
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 1.0,
+                    "dates": [
+                        "2012/01/24"
+                    ]
+                },
+                "absences": {
+                    "count": 3.0,
+                    "dates": [
+                        "2012/02/08",
+                        "2012/03/13",
+                        "2012/03/14"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Kirsten Holmes",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.67,
+                    "9th": 0.72,
+                    "8th": 0.73,
+                    "7th": 0.75,
+                    "6th": 0.77
+                }
+            },
+            {
+                "currentCourse": "C",
+                "studentGoal": "C",
+                "previousCourse": "C"
+            },
+            {
+                "scores": [
+                    0.79,
+                    0.7000000000000001,
+                    0.66,
+                    0.71,
+                    0.72
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 1.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 0.0,
+                    "dates": [
+                        
+                    ]
+                },
+                "absences": {
+                    "count": 1.0,
+                    "dates": [
+                        "2012/03/13"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Maria Garcia",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.72,
+                    "9th": 0.75,
+                    "8th": 0.76,
+                    "7th": 0.71,
+                    "6th": 0.76
+                }
+            },
+            {
+                "currentCourse": "B",
+                "studentGoal": "B",
+                "previousCourse": "B"
+            },
+            {
+                "scores": [
+                    0.9,
+                    0.81,
+                    0.89,
+                    0.8200000000000001,
+                    0.88
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 1.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 2.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 4.0,
+                    "dates": [
+                        "2012/01/14",
+                        "2012/01/25",
+                        "2012/04/10",
+                        "2012/04/25"
+                    ]
+                },
+                "absences": {
+                    "count": 3.0,
+                    "dates": [
+                        "2012/03/08",
+                        "2012/03/09",
+                        "2012/04/23"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Nikolas Mikhailovich",
+                "englishLanguageProficiencyLacking": true,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.63,
+                    "9th": 0.57,
+                    "8th": 0.55,
+                    "7th": 0.64,
+                    "6th": 0.63
+                }
+            },
+            {
+                "currentCourse": "C",
+                "studentGoal": "C",
+                "previousCourse": "F"
+            },
+            {
+                "scores": [
+                    0.66,
+                    0.71,
+                    0.73,
+                    0.7000000000000001,
+                    0.79
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 1.0,
+                    "dates": [
+                        "2012/03/19"
+                    ]
+                },
+                "absences": {
+                    "count": 1.0,
+                    "dates": [
+                        "2012/01/17"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Roshawn Dawson",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.78,
+                    "9th": 0.79,
+                    "8th": 0.82,
+                    "7th": 0.8,
+                    "6th": 0.77
+                }
+            },
+            {
+                "currentCourse": "C",
+                "studentGoal": "C",
+                "previousCourse": "C"
+            },
+            {
+                "scores": [
+                    0.64,
+                    0.71,
+                    0.75,
+                    0.78,
+                    0.71
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 1.0,
+                    "lastTermCount": 1.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 0.0,
+                    "dates": [
+                        
+                    ]
+                },
+                "absences": {
+                    "count": 6.0,
+                    "dates": [
+                        "2012/01/09",
+                        "2012/01/10",
+                        "2012/01/11",
+                        "2012/01/12",
+                        "2012/01/13",
+                        "2012/04/17"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Samuel Miller",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.81,
+                    "9th": 0.76,
+                    "8th": 0.83,
+                    "7th": 0.84,
+                    "6th": 0.81
+                }
+            },
+            {
+                "currentCourse": "B",
+                "studentGoal": "B",
+                "previousCourse": "C"
+            },
+            {
+                "scores": [
+                    0.81,
+                    0.88,
+                    0.77,
+                    0.91,
+                    0.84
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 1.0,
+                    "dates": [
+                        "2012/02/27"
+                    ]
+                },
+                "absences": {
+                    "count": 0.0,
+                    "dates": [
+                        
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Xu Mei",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.83,
+                    "9th": 0.86,
+                    "8th": 0.89,
+                    "7th": 0.88,
+                    "6th": 0.91
+                }
+            },
+            {
+                "currentCourse": "B",
+                "studentGoal": "B",
+                "previousCourse": "B"
+            },
+            {
+                "scores": [
+                    0.92,
+                    0.87,
+                    0.65,
+                    0.88,
+                    0.85
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 0.0,
+                    "dates": [
+                        
+                    ]
+                },
+                "absences": {
+                    "count": 2.0,
+                    "dates": [
+                        "2012/03/08",
+                        "2012/04/16"
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Donald Chase",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 0
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.92,
+                    "9th": 0.89,
+                    "8th": 0.91,
+                    "7th": 0.96,
+                    "6th": 0.93
+                }
+            },
+            {
+                "currentCourse": "A",
+                "studentGoal": "B",
+                "previousCourse": "A"
+            },
+            {
+                "scores": [
+                    0.97,
+                    0.93,
+                    0.9,
+                    0.97,
+                    0.9500000000000001
+                ],
+                "lateCount": 0.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 1.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 1.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 0.0,
+                    "dates": [
+                        
+                    ]
+                },
+                "absences": {
+                    "count": 0.0,
+                    "dates": [
+                        
+                    ]
+                }
+            }
+        ],
+        [
+            {
+                "name": "Scott Ortiz",
+                "englishLanguageProficiencyLacking": false,
+                "specialEdStatus": false,
+                "lateAssignments": 1
+            },
+            {
+                "scoreByGrade": {
+                    "latest": 0.82,
+                    "9th": 0.71,
+                    "8th": 0.74,
+                    "7th": 0.73,
+                    "6th": 0.78
+                }
+            },
+            {
+                "currentCourse": "B",
+                "studentGoal": "C",
+                "previousCourse": "C"
+            },
+            {
+                "scores": [
+                    0.89,
+                    0.78,
+                    0.84,
+                    0.79,
+                    0.81
+                ],
+                "lateCount": 1.0
+            },
+            {
+                "detentions": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                },
+                "referrals": {
+                    "thisTermCount": 0.0,
+                    "lastTermCount": 0.0
+                }
+            },
+            {
+                "tardies": {
+                    "count": 0.0,
+                    "dates": [
+                        
+                    ]
+                },
+                "absences": {
+                    "count": 1.0,
+                    "dates": [
+                        "2012/03/14"
+                    ]
+                }
+            }
+        ]
+    ]
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>Dashboard</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+    <link   rel="stylesheet"       href="//netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css">
+
+    <link   rel="stylesheet"      href="//raw.github.com/mbostock/d3/master/lib/colorbrewer/colorbrewer.css">
+    <script type="text/javascript" src="//raw.github.com/mbostock/d3/master/lib/colorbrewer/colorbrewer.js"></script>
+
+    <link   rel="stylesheet/less"  href="dashboard.less" type="text/css">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.3.0/less-1.3.0.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/2.10.0/d3.v2.min.js"></script>
+    <script type="text/javascript" src="dashboard.js"></script>
+</head>
+
+<body>
+
+<table  id="students">
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th title="Standardized Math Assessment test results over the years">SMA</th>
+            <th title="Grade objective set by student and last year grade">Objective</th>
+            <th>Assignments</th>
+            <th>Disciplinary</th>
+            <th>Attendance</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<div id="stats"></div>
+<p id="lastClass"><strong>Last class:</strong> 2 absences, 1 tardy</p>
+
+<script type="text/javascript">d3.json('data-dashboard.json', buildStructure);</script>
+
+</body>
+</html>
