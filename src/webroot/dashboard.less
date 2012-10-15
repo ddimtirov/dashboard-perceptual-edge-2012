@@ -52,19 +52,32 @@
 
 #lastClass         { font-size: 11pt; }
 
+#stats *,
+#lastClass strong,
+th {
+  font-weight: 300;
+  text-shadow: 0px 1px white;
+}
+
 tr:hover           {
   background-color: #fffeb8;
   color: black;
 }
 
-.studentName, .grades, .assignments, .attendance, .disciplinary, .standardizedTests {
+.studentName, .grades, .assignments, .standardizedTests {
   padding-right: 1em;
 }
+.attendance, .disciplinary {
+  text-align: center;
+}
 
-.standardizedTests, .assignments { color: black; }
-
+#students { width: 100%; }
 body {
-  font-family: Segoe, Tahoma, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
   background-color: #f8f8ff;
+  background-image: url("egg_shell/egg_shell.png");
   color: #606060;
+  max-width: 1024px;
+  margin: 1em auto;
 }

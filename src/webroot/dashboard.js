@@ -2,30 +2,34 @@ function buildStructure(json) {
     'use strict';
 
     var rowHeight = 16;
+    var pct = d3.format('%');
 
     function icon(sel, iconClass, title) {
         return sel.append('i').attr('class', iconClass + ' icon-small').attr('title', title);
     }
 
-
     function sparkline(svg, scores) {
+        var i, cx, cy;
+
         svg.append('svg:rect').attr('height', '1').attr('width', '100%').attr('y', '25%').attr('class', 'pct25');
         svg.append('svg:rect').attr('height', '1').attr('width', '100%').attr('y', '50%').attr('class', 'pct50');
         svg.append('svg:rect').attr('height', '1').attr('width', '100%').attr('y', '75%').attr('class', 'pct25');
 
-        for (var j = 0; j < scores.length; j++) {
-            var cx = j * 6 + 3;
-            var cy = svg.attr('height') - d3.round(scores[j] * (svg.attr('height') - 3) + 1.5);
+        for (i = 0; i < scores.length; i++) {
+            cx = i * 6 + 3;
+            cy = svg.attr('height') - d3.round(scores[i] * (svg.attr('height') - 3) + 1.5);
             svg.append('svg:circle')
                 .attr('cx', cx)
                 .attr('cy', cy)
                 .attr('r', 1.5)
-                .attr('class', j === 0 ? 'current' : 'past');
+                .attr('class', i === 0 ? 'current' : 'past');
         }
     }
 
     function bullet(svg, domain, actual, goal, mark) {
-        var scaleX = d3.scale.ordinal().domain(domain).rangePoints([0, svg.attr('width')]);
+        var scaleX;
+
+        scaleX = d3.scale.ordinal().domain(domain).rangePoints([0, svg.attr('width')]);
         svg.append('svg:rect')
             .attr('class', 'range')
             .attr('width', '100%')
@@ -43,10 +47,10 @@ function buildStructure(json) {
             .attr('height', '100%');
     }
 
-    var pct = d3.format('%');
-
     function renderStudent(node, student) {
-        var sel = d3.select(node).text(student.name).attr('class', 'studentName');
+        var sel, severityColor;
+
+        sel = d3.select(node).text(student.name).attr('class', 'studentName');
         if (student.englishLanguageProficiencyLacking) {
             icon(sel, 'icon-globe', 'English language not proficient');
         }
@@ -54,7 +58,6 @@ function buildStructure(json) {
             icon(sel, 'icon-bullhorn', 'Special education status');
         }
         if (student.lateAssignments) {
-            var severityColor;
             switch (student.lateAssignments) {
                 case 1: severityColor = 'lightgray'; break;
                 case 2: severityColor = 'gray'; break;
@@ -65,8 +68,10 @@ function buildStructure(json) {
     }
 
     function renderGrade(node, grades) {
-        var sel = d3.select(node).attr('class', 'grades');
-        var svg = sel.append('svg')
+        var sel, svg;
+
+        sel = d3.select(node).attr('class', 'grades');
+        svg = sel.append('svg')
             .attr('title', 'Current: ' + grades.currentCourse + ', Goal: ' + grades.studentGoal + ', Last year: ' + grades.previousCourse)
             .attr('class', 'bullet')
             .attr('width', 110)
@@ -76,14 +81,16 @@ function buildStructure(json) {
     }
 
     function renderAssignments(node, assignments) {
-        var scoresPct = assignments.scores.map(function (it) { return pct(it) });
-        var lateMsg = assignments.lateCount > 0 ? ' (' + assignments.lateCount + ' returned late)' : '';
+        var scoresPct, lateMsg, sel, svg;
 
-        var sel = d3.select(node).attr('class', 'assignments');
+        scoresPct = assignments.scores.map(function (it) { return pct(it) });
+        lateMsg = assignments.lateCount > 0 ? ' (' + assignments.lateCount + ' returned late)' : '';
+
+        sel = d3.select(node).attr('class', 'assignments');
         sel.text(pct(assignments.scores[0]) + ' ')
            .attr('title', 'Assignment Scores: ' + scoresPct.join(', ') + lateMsg);
 
-        var svg = sel.append('svg')
+        svg = sel.append('svg')
             .attr('class', 'sparkline')
             .attr('width', assignments.scores.length * 6)
             .attr('height', rowHeight);
@@ -97,16 +104,18 @@ function buildStructure(json) {
     }
 
     function renderStandardizedTests(node, data) {
-        var scoresPct = d3.entries(data.scoreByGrade)
+        var scoresPct, sel, svg;
+
+        scoresPct = d3.entries(data.scoreByGrade)
             .filter(function(it) { return it!=='latest grade';})
             .map(function(it) { return it.key + ' grade: ' + pct(it.value); })
             .join(', ');
 
-        var sel = d3.select(node).attr('class', 'standardizedTests');
+        sel = d3.select(node).attr('class', 'standardizedTests');
         sel.text(pct(data.scoreByGrade.latest) + ' ')
            .attr('title', 'Previous years scores: ' + scoresPct);
 
-        var svg = sel.append('svg')
+        svg = sel.append('svg')
             .attr('class', 'sparkline')
             .attr('width', d3.values(data.scoreByGrade).length * 6)
             .attr('height', rowHeight);
@@ -115,8 +124,10 @@ function buildStructure(json) {
     }
 
     function renderAttendance(node, data) {
-        var sel = d3.select(node).attr('class', 'attendance');
-        var svg = sel.append('svg')
+        var sel, svg;
+
+        sel = d3.select(node).attr('class', 'attendance');
+        svg = sel.append('svg')
             .attr('class', 'barchart')
             .attr('width', 160)
             .attr('height', rowHeight);
@@ -143,9 +154,11 @@ function buildStructure(json) {
     }
 
     function renderDisciplinary(node, data) {
-        var sel = d3.select(node).attr('class', 'disciplinary');
+        var sel, svg, thisYear, lastYear, disciplinedThisTerm, lastYearFragment;
 
-        var thisYear = '';
+        sel = d3.select(node).attr('class', 'disciplinary');
+
+        thisYear = '';
         if (data.detentions.thisTermCount) {
             thisYear += data.detentions.thisTermCount + ' detentions';
         }
@@ -154,7 +167,7 @@ function buildStructure(json) {
             thisYear += data.referrals.thisTermCount + ' referrals';
         }
 
-        var lastYear = '';
+        lastYear = '';
         if (data.detentions.lastTermCount) {
             lastYear += data.detentions.lastTermCount + ' detentions';
         }
@@ -164,16 +177,18 @@ function buildStructure(json) {
         }
 
         if (thisYear) {
-            var lastYearFragment = lastYear.length ? ' (last year ' + lastYear + ')' : '';
+            lastYearFragment = lastYear.length ? ' (last year ' + lastYear + ')' : '';
             sel.attr('title', thisYear + lastYearFragment);
         }
 
-        var svg = sel.append('svg')
+
+        disciplinedThisTerm = data.detentions.thisTermCount || data.referrals.thisTermCount;
+
+        svg = sel.append('svg')
             .attr('class', 'barchart')
             .attr('width', 120)
             .attr('height', rowHeight);
 
-        var disciplinedThisTerm = data.detentions.thisTermCount || data.referrals.thisTermCount;
         svg.append('svg:rect').attr('class', 'detentions')
             .attr('height', 11)
             .attr('width', data.detentions.thisTermCount * 20)
@@ -224,26 +239,32 @@ function buildStructure(json) {
     }
 
     function appendStateDistribution(title, aggregated) {
-        var stats = d3.select('#stats').append('div');
+        var stats, svg, offset, labels, color, gradient;
+
+        stats = d3.select('#stats').append('div');
         stats.append('div').text(title)
              .style('float', 'left')
              .style('width', '100px')
              .style('text-align', 'right')
              .style('padding-right', '.3em');
 
-        var svg = stats.append('svg')
+        svg = stats.append('svg')
             .attr('class', 'stats')
             .attr('width', 800)
             .attr('height', 22);
 
 
-        var labels = aggregated.distribution.map(function (population) { return population.score });
-        var color = d3.scale.ordinal().domain(labels).range(colorbrewer.RdYlGn[6]);
+        labels = aggregated.distribution.map(function (population) {
+            return population.score
+        });
+        color = d3.scale.ordinal().domain(labels).range(colorbrewer.RdYlGn[6]);
 
-        var offset = 0;
+        offset = 0;
         aggregated.distribution.forEach(function (population, i) {
-                var label = population.score;
-                var width = population.populationPct * 100;
+                var width, label;
+
+                label = population.score;
+                width = population.populationPct * 100;
                 svg.append('svg:rect')
                     .attr('x', offset + '%').attr('y', '5%')
                     .attr('width', width + '%').attr('height', '90%')
@@ -259,7 +280,7 @@ function buildStructure(json) {
 
         );
 
-        var gradient = svg.append("svg:defs").append("svg:linearGradient")
+        gradient = svg.append("svg:defs").append("svg:linearGradient")
             .attr("id", "gradient")
             .attr("x1", "0%")
             .attr("y1", "0%")
