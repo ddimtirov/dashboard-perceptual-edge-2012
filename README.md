@@ -3,20 +3,23 @@ Overview
 
 This is my submission for the 2012 Dashboard Competition organized by Perceptual Edge. You can view the [rules](http://www.perceptualedge.com/blog/?p=1308 "Perceptual Edge’s 2012 Dashboard Design Competition"), and [the winners](http://www.perceptualedge.com/blog/?p=1374 "2012 Perceptual Edge Dashboard Design Competition: We Have a Winner!") at the _Visual Business Intelligence_ blog.
 
-Check out the **[live dashboard](http://bl.ocks.org/d/3896632/ "latest stable version of the dashboard")** - I will try to update it every time I change something of significance. As my primary motivation for participating was to learn, I am planning to keep implementing the mocked up features described in the original submission (see [/src/mockups](https://github.com/ddimtirov/dashboard-perceptual-edge-2012/tree/master/src) ). I decided not to change the concept, even though I am tempted to borrow some of the good ideas of the winning entry ;-)
+Check out the **[live dashboard](http://bl.ocks.org/d/3896632/ "latest stable version of the dashboard")** - I will try to update it every time I change something of significance. As my primary motivation for participating was to learn, I am planning to keep implementing the mocked up features described in the original submission (see [/src/mockups](https://github.com/ddimtirov/dashboard-perceptual-edge-2012/tree/master/src) ). 
+
+I have decided not to change the concept, even though I am tempted to borrow some of the good ideas of the winning entry ;-)
 
 
 Competition Entry Submission
 ============================
-
-  This document aims to describe the design and rationale behind the
+<pre>
+	This document aims to describe the design and rationale behind the
 	dashboard and can not serve as user manual. The current dashboard
 	design should be treated as finished prototype, ready to be shown to
 	client, but pending tweeks based on initial feedback and not yet
 	ready for a wide rollout.
 
-	The dashboard consists of the following elements (see '1-dashboard.png'):
+	The dashboard consists of the following elements:
 
+<img height="50%" width="50%" alt="dashboard overview" title="Overview" src="//raw.github.com/ddimtirov/dashboard-perceptual-edge-2012/master/src/mockups/1-dashboard.png"/>
 
 	1. Students table
 
@@ -178,6 +181,8 @@ Competition Entry Submission
 		strategy for switching between them without creating unwanted
 		transitions.
 
+<img height="50%" width="50%" alt="Overview - monochrome"       src="//raw.github.com/ddimtirov/dashboard-perceptual-edge-2012/master/src/mockups/1-dashboard-alt.png"/> &nbsp;
+<img height="50%" width="50%" alt="Mouse over row - monochrome" src="//raw.github.com/ddimtirov/dashboard-perceptual-edge-2012/master/src/mockups/2-dashboard-row-alt.png"/>
 
 	3. Last class presence
 
@@ -189,8 +194,9 @@ Competition Entry Submission
 	4. Interaction
 
 		Mousing over a row would highlight the row and place markers of
-		where that student would be in all three peer groups
-		(see '2-dashboard-row.png').
+		where that student would be in all three peer groups:
+		
+<img height="50%" width="50%" alt="dashboard mouseover row" title="Mouseover Row" src="//raw.github.com/ddimtirov/dashboard-perceptual-edge-2012/master/src/mockups/2-dashboard-row.png"/>
 
 		Mousing over a quantitive column would color code the values in
 		the column in three 33-percentile groups.
@@ -198,6 +204,8 @@ Competition Entry Submission
 		For example, in '3-dashboard-column.png', the teacher has
 		hovered over the 'Assignments' heading and the students are
 		highlighted as bottom, middle and top third.
+		
+<img height="50%" width="50%" alt="dashboard mouseover column" title="Mouseover Column" src="//raw.github.com/ddimtirov/dashboard-perceptual-edge-2012/master/src/mockups/3-dashboard-column.png"/>
 
 		It would work the same way for the SMA column, 'Objectives'
 		would color based on target score, 'Disciplinary' and
@@ -205,8 +213,8 @@ Competition Entry Submission
 
 		Mousing over the peer-group graph, would show a marker and would
 		color the SMA values above and below the threshold.
-		(see '4-dashboard-threshold.png')
-
+		
+<img height="50%" width="50%" alt="dashboard mouseover threshold" title="Mouseover Stats (Thrteshold)" src="//raw.github.com/ddimtirov/dashboard-perceptual-edge-2012/master/src/mockups/5-dashboard-threshold.png"/>
 
 	5. Responsive design
 
@@ -294,3 +302,5 @@ Competition Entry Submission
 			|              |                     |
 			+--------------+                     |
 							                     |   
+
+</pre>
