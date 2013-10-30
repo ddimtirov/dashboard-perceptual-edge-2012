@@ -11,40 +11,41 @@ function buildStructure(json) {
     function sparkline(svg, scores) {
         var i, cx, cy;
 
-        svg.append('svg:rect').attr('height', '1').attr('width', '100%').attr('y', '25%').attr('class', 'pct25');
-        svg.append('svg:rect').attr('height', '1').attr('width', '100%').attr('y', '50%').attr('class', 'pct50');
-        svg.append('svg:rect').attr('height', '1').attr('width', '100%').attr('y', '75%').attr('class', 'pct25');
+        svg.append('svg:rect').attr({ height: '1', width: '100%', y: '25%', 'class': 'pct25', 'shape-rendering': 'crisp-edges' });
+        svg.append('svg:rect').attr({ height: '1', width: '100%', y: '50%', 'class': 'pct50', 'shape-rendering': 'crisp-edges' });
+        svg.append('svg:rect').attr({ height: '1', width: '100%', y: '75%', 'class': 'pct25', 'shape-rendering': 'crisp-edges' });
 
         for (i = 0; i < scores.length; i++) {
             cx = i * 6 + 3;
             cy = svg.attr('height') - d3.round(scores[i] * (svg.attr('height') - 3) + 1.5);
-            svg.append('svg:circle')
-                .attr('cx', cx)
-                .attr('cy', cy)
-                .attr('r', 1.5)
-                .attr('class', i === 0 ? 'current' : 'past');
+            svg.append('svg:circle').attr({
+                    cx: cx + 0.5, cy: cy + 0.5, r: 1.5,
+                    'class': i === 0 ? 'current' : 'past',
+                    'shape-rendering': 'crisp-edges'
+            });
         }
     }
 
-    function bullet(svg, domain, actual, goal, mark) {
+    function bullet(svg, domain, actual, mark, goal) {
         var scaleX;
 
         scaleX = d3.scale.ordinal().domain(domain).rangePoints([0, svg.attr('width')]);
-        svg.append('svg:rect')
-            .attr('class', 'range')
-            .attr('width', '100%')
-            .attr('height', '100%');
-        svg.append('svg:rect').attr('class', 'target')
-            .attr('width', scaleX(goal))
-            .attr('height', '100%');
-        svg.append('svg:rect').attr('class', 'actual')
-            .attr('width', scaleX(actual))
-            .attr('height', '34%')
-            .attr('y', '33%');
-        svg.append('svg:rect').attr('class', 'mark')
-            .attr('x', scaleX(mark) - 2)
-            .attr('width', 2)
-            .attr('height', '100%');
+        svg.append('svg:rect').attr({
+            width: '100%', height: '100%',
+            'class': 'range', 'shape-rendering': 'crisp-edges'
+        });
+        svg.append('svg:rect').attr({
+            width: d3.round(scaleX(goal)), height: '100%',
+            'class': 'last', 'shape-rendering': 'crisp-edges'
+        });
+        svg.append('svg:rect').attr({
+            width: d3.round(scaleX(actual)), height: '6', y: '5',
+            'class': 'actual', 'shape-rendering': 'crisp-edges'
+        });
+        svg.append('svg:rect').attr({
+            'x': d3.round(scaleX(mark)) - 4, width: 4, height: '100%',
+            'class': 'mark', 'shape-rendering': 'crisp-edges'
+        });
     }
 
     function renderStudent(node, student) {
@@ -71,11 +72,11 @@ function buildStructure(json) {
         var sel, svg;
 
         sel = d3.select(node).attr('class', 'grades');
-        svg = sel.append('svg')
-            .attr('title', 'Current: ' + grades.currentCourse + ', Goal: ' + grades.studentGoal + ', Last year: ' + grades.previousCourse)
-            .attr('class', 'bullet')
-            .attr('width', 110)
-            .attr('height', rowHeight);
+        svg = sel.append('svg').attr({
+            title: 'Current: ' + grades.currentCourse + ', Goal: ' + grades.studentGoal + ', Last year: ' + grades.previousCourse,
+            width: 110, height: rowHeight,
+            'class': 'bullet'
+        });
 
         bullet(svg, ['?', 'F', 'E', 'D', 'C', 'B', 'A'], grades.currentCourse, grades.studentGoal, grades.previousCourse);
     }
@@ -88,13 +89,12 @@ function buildStructure(json) {
 
         sel = d3.select(node).attr('class', 'assignments');
         sel.text(pct(assignments.scores[0]) + ' ')
-           .attr('title', 'Assignment Scores: ' + scoresPct.join(', ') + lateMsg);
+            .attr('title', 'Assignment Scores: ' + scoresPct.join(', ') + lateMsg);
 
-        svg = sel.append('svg')
-            .attr('class', 'sparkline')
-            .attr('width', assignments.scores.length * 6)
-            .attr('height', rowHeight);
-
+        svg = sel.append('svg').attr({
+            width: assignments.scores.length * 6, height: rowHeight,
+            'class': 'sparkline'
+        });
         sparkline(svg, assignments.scores);
 
         if (assignments.lateCount > 0) {
@@ -115,10 +115,10 @@ function buildStructure(json) {
         sel.text(pct(data.scoreByGrade.latest) + ' ')
            .attr('title', 'Previous years scores: ' + scoresPct);
 
-        svg = sel.append('svg')
-            .attr('class', 'sparkline')
-            .attr('width', d3.values(data.scoreByGrade).length * 6)
-            .attr('height', rowHeight);
+        svg = sel.append('svg').attr({
+            width: d3.values(data.scoreByGrade).length * 6, height: rowHeight,
+            'class': 'sparkline'
+        });
 
         sparkline(svg, d3.values(data.scoreByGrade));
     }
@@ -128,29 +128,27 @@ function buildStructure(json) {
 
         sel = d3.select(node).attr('class', 'attendance');
         svg = sel.append('svg')
-            .attr('class', 'barchart')
-            .attr('width', 160)
-            .attr('height', rowHeight);
+            .attr({ 'class': 'barchart', width: 160, height: rowHeight });
 
-        svg.append('svg:rect').attr('class', 'absences').attr('title', 'Absences: ' + data.absences.dates.join(', '))
-            .attr('height', '100%')
-            .attr('width', data.absences.count * 10)
-            .attr('x', 80 - data.absences.count * 10);
+        svg.append('svg:rect').attr({
+            'class': 'absences',
+            title: 'Absences: ' + data.absences.dates.join(', '),
+            height: '100%', width: data.absences.count * 10, x: 80 - data.absences.count * 10
+        });
 
-        svg.append('svg:rect').attr('class', 'tardies').attr('title', 'Tardies: ' + data.tardies.dates.join(', '))
-            .attr('height', '100%')
-            .attr('width', data.tardies.count * 10)
-            .attr('x', 80);
+        svg.append('svg:rect').attr({
+            'class': 'tardies',
+            title: 'Tardies: ' + data.tardies.dates.join(', '),
+            height: '100%', width: data.tardies.count * 10, x: 80
+        });
 
         if (data.absences.count) svg.append('svg:text').attr('class', 'label')
             .text(data.absences.count)
-            .attr('x', 71)
-            .attr('y', 12);
+            .attr({ x: 71, y: 12 });
 
         if (data.tardies.count) svg.append('svg:text').attr('class', 'label')
             .text(data.tardies.count)
-            .attr('x', 81)
-            .attr('y', 12);
+            .attr({ x: 81, y: 12 });
     }
 
     function renderDisciplinary(node, data) {
@@ -184,46 +182,42 @@ function buildStructure(json) {
 
         disciplinedThisTerm = data.detentions.thisTermCount || data.referrals.thisTermCount;
 
-        svg = sel.append('svg')
-            .attr('class', 'barchart')
-            .attr('width', 120)
-            .attr('height', rowHeight);
+        svg = sel.append('svg').attr({
+            'class': 'barchart',
+            width: 120, height: rowHeight
+        });
 
-        svg.append('svg:rect').attr('class', 'detentions')
-            .attr('height', 11)
-            .attr('width', data.detentions.thisTermCount * 20)
-            .attr('x', 60 - data.detentions.thisTermCount * 20)
-            .attr('y', 3);
+        svg.append('svg:rect').attr({
+            'class': 'detentions',
+            height: 11, width: data.detentions.thisTermCount * 20, x: 60 - data.detentions.thisTermCount * 20, y: 3
+        });
 
-        svg.append('svg:rect').attr('class', 'referrals')
-            .attr('height', 11)
-            .attr('width', data.referrals.thisTermCount * 20)
-            .attr('x', 60)
-            .attr('y', 3);
+        svg.append('svg:rect').attr({
+            'class': 'referrals',
+            height: 11, width: data.referrals.thisTermCount * 20, x: 60, y: 3
+        });
 
         if (disciplinedThisTerm && data.detentions.lastTermCount) {
-            svg.append('svg:rect').attr('class', 'detentions')
-                .attr('height', '100%')
-                .attr('width', 2)
-                .attr('x', 60 - data.detentions.lastTermCount * 20);
+            svg.append('svg:rect').attr({
+                'class': 'detentions',
+                height: '100%', width: 2, x: 60 - data.detentions.lastTermCount * 20
+            });
         }
 
         if (disciplinedThisTerm && data.referrals.lastTermCount) {
-            svg.append('svg:rect').attr('class', 'detentions')
-                .attr('height', '100%')
-                .attr('width', 2)
-                .attr('x', 60 + data.referrals.lastTermCount * 20);
+            svg.append('svg:rect').attr({
+                'class': 'detentions',
+                height: '100%', width: 2, x: 60 + data.referrals.lastTermCount * 20
+            });
         }
 
         if (data.detentions.thisTermCount) svg.append('svg:text').attr('class', 'label')
             .text(data.detentions.thisTermCount)
-            .attr('x', 51)
-            .attr('y', 12);
+            .attr({ x: 51, y: 12 });
 
         if (data.referrals.thisTermCount) svg.append('svg:text').attr('class', 'label')
             .text(data.referrals.thisTermCount)
-            .attr('x', 61)
-            .attr('y', 12);
+            .attr({ x: 61, y: 12 });
     }
 
     function renderDispatch(data, i) {
@@ -248,16 +242,17 @@ function buildStructure(json) {
              .style('text-align', 'right')
              .style('padding-right', '.3em');
 
-        svg = stats.append('svg')
-            .attr('class', 'stats')
-            .attr('width', 800)
-            .attr('height', 22);
+        svg = stats.append('svg').attr({'class': 'stats', width: 800, height: 22});
 
 
         labels = aggregated.distribution.map(function (population) {
             return population.score
         });
-        color = d3.scale.ordinal().domain(labels).range(colorbrewer.RdYlGn[6]);
+        color = d3.scale.ordinal().domain(labels).range(colorbrewer.RdYlBu[6].map(function(rgbStr) {
+            var hsl = d3.rgb(rgbStr).hsl();
+            hsl.s = 0.2;
+            return hsl;
+        }));
 
         offset = 0;
         aggregated.distribution.forEach(function (population, i) {
@@ -265,14 +260,12 @@ function buildStructure(json) {
 
                 label = population.score;
                 width = population.populationPct * 100;
-                svg.append('svg:rect')
-                    .attr('x', offset + '%').attr('y', '5%')
-                    .attr('width', width + '%').attr('height', '90%')
+                svg.append('svg:rect').attr({ x: offset + '%', y: '5%', width: width + '%', height: '90%'})
                     .style('fill', color(label));
+
                 svg.append('svg:text').attr('class', 'label')
                     .text(label)
-                    .attr('x', (offset + width / 2 - 3.5) + '%')
-                    .attr('y', 16)
+                    .attr({x: (offset + width / 2 - 3.5) + '%', y: 16 })
                     .style('fill', i === 0 || i == 5 ? 'white' : 'black');
 
                 offset += width;
@@ -280,20 +273,18 @@ function buildStructure(json) {
 
         );
 
-        gradient = svg.append("svg:defs").append("svg:linearGradient")
-            .attr("id", "gradient")
-            .attr("x1", "0%")
-            .attr("y1", "0%")
-            .attr("x2", "100%")
-            .attr("y2", "0%")
-            .attr("spreadMethod", "pad");
+        gradient = svg.append("svg:defs").append("svg:linearGradient").attr({
+            id: "gradient",
+            spreadMethod: "pad",
+            x1: "0%", y1: "0%",
+            x2: "100%", y2: "0%"
+        });
 
-        gradient.append("svg:stop").attr("offset", "0%").attr("stop-color", "blue").attr("stop-opacity", 1);
-        gradient.append("svg:stop").attr("offset", "30%").attr("stop-color", "cyan").attr("stop-opacity", 1);
-        gradient.append("svg:stop").attr("offset", "100%").attr("stop-color", "blue").attr("stop-opacity", 1);
+        gradient.append("svg:stop").attr({ offset:   "0%", "stop-color": "blue", "stop-opacity": 1 });
+        gradient.append("svg:stop").attr({ offset:  "30%", "stop-color": "cyan", "stop-opacity": 1 });
+        gradient.append("svg:stop").attr({ offset: "100%", "stop-color": "blue", "stop-opacity": 1 });
 
-        svg.append('svg:rect').attr('x', pct(aggregated.median))
-            .attr('width', '5px').attr('height', '100%')
+        svg.append('svg:rect').attr({ x: pct(aggregated.median), width: '5px', height: '100%' })
             .style('fill', 'url(#gradient)');
 
     }

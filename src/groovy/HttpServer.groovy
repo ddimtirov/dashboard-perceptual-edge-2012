@@ -178,7 +178,7 @@ static Map<String, ?> load(InputStream spreadsheetInputStream) {
         ((char)it.grades.studentGoal) - ((char)it.grades.currentCourse)
     }
     table.students.asType(List).sort(true) { s1, s2 ->
-        gradeGap(s1) <=> gradeGap(s2)
+        gradeGap(s1) <=> gradeGap(s2) ?: s2.grades.currentCourse <=> s1.grades.currentCourse
     }
     return table
 }

@@ -1,10 +1,13 @@
 // colors
-@bar-range:        #ececf0;
-@bar-target:       #b0c4de;
-@bar-indicator:    #0480be;
-@current-sample:   red;
-@guideline-50pct:  silver;
-@guideline-25pct:  lightgray;
+@page-bgcolor: #FCFFF5;
+@page-color: #193441;
+@guideline-50pct:  #ddd;
+@guideline-25pct:  #eec;
+
+@bar-range:        #D1DBBD;
+@bar-last:         #91AA9D;
+@bar-indicator:    #193441;
+@current-sample:   #91AA9D;
 
 // mixins
 .bold(@size)       { font-size: @size; font-weight: bold; }
@@ -15,7 +18,7 @@
 .icon-globe        { color: #195f91; }
 
 .bullet {
-  .target          { fill: @bar-target; }
+  .last            { fill: @bar-last; }
   .actual, .mark   { fill: @bar-indicator; }
   .range           { fill: @bar-range; }
 }
@@ -27,7 +30,7 @@
   .detentions      { fill: @bar-indicator; }
 
   .tardies,
-  .referrals       { fill: @bar-target; }
+  .referrals       { fill: @bar-last; }
 
   .label,
   .label.absences,
@@ -55,11 +58,12 @@
 #stats *,
 #lastClass strong,
 th {
-  font-weight: 300;
-  text-shadow: 0px 1px white;
+  font-weight: 400;
 }
+#stats *  { font-size: 0.9em; }
+th { font-size: 0.7em; }
 
-tr:hover           {
+tr:hover td {
   background-color: #fffeb8;
   color: black;
 }
@@ -75,9 +79,8 @@ tr:hover           {
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
-  background-color: #f8f8ff;
-  background-image: url("egg_shell/egg_shell.png");
-  color: #606060;
+  background-color: @page-bgcolor;
+  color: @page-color;
   max-width: 1024px;
   margin: 1em auto;
 }

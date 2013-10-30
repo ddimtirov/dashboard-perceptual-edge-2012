@@ -12,10 +12,10 @@
     <inspection_tool class="AbstractMethodOverridesConcreteMethod" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="AbstractMethodWithMissingImplementations" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="AccessToNonThreadSafeStaticFieldFromInstance" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="nonThreadSafeTypes" value="" />
       <option name="nonThreadSafeClasses">
         <value />
       </option>
+      <option name="nonThreadSafeTypes" value="" />
     </inspection_tool>
     <inspection_tool class="AccessToStaticFieldLockedOnInstance" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="AmbiguousFieldAccess" enabled="true" level="WARNING" enabled_by_default="true" />
@@ -161,6 +161,8 @@
       <option name="excludeDeprecated" value="true" />
       <option name="excludeEnum" value="false" />
       <option name="excludeAbstract" value="false" />
+      <option name="excludeTestCode" value="false" />
+      <option name="excludeInnerClasses" value="false" />
     </inspection_tool>
     <inspection_tool class="ClassInTopLevelPackage" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="ClassIndependentOfModule" enabled="true" level="WARNING" enabled_by_default="true" />
@@ -257,6 +259,7 @@
     <inspection_tool class="ConstantStringIntern" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="ConstantValueVariableUse" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="ConstructorCount" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoreDeprecatedConstructors" value="false" />
       <option name="m_limit" value="5" />
     </inspection_tool>
     <inspection_tool class="ContinueStatement" enabled="true" level="WARNING" enabled_by_default="true" />
@@ -379,6 +382,7 @@
     <inspection_tool class="FieldCount" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="m_countConstantFields" value="false" />
       <option name="m_considerStaticFinalFieldsConstant" value="false" />
+      <option name="myCountEnumConstants" value="false" />
       <option name="m_limit" value="10" />
     </inspection_tool>
     <inspection_tool class="FieldHasSetterButNoGetter" enabled="true" level="WARNING" enabled_by_default="true" />
@@ -714,10 +718,7 @@
       <option name="m_maxLength" value="32" />
     </inspection_tool>
     <inspection_tool class="LocalVariableOfConcreteClass" enabled="true" level="WARNING" enabled_by_default="true" />
-    <inspection_tool class="LogStatementGuardedByLogCondition" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="loggerClassName" value="java.util.logging.Logger" />
-      <option name="loggerMethodAndconditionMethodNames" value="fine,isLoggable(java.util.logging.Level.FINE),finer,isLoggable(java.util.logging.Level.FINER),finest,isLoggable(java.util.logging.Level.FINEST)" />
-    </inspection_tool>
+    <inspection_tool class="LogStatementGuardedByLogCondition" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="LoggerInitializedWithForeignClass" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="loggerClassName" value="" />
       <option name="loggerFactoryMethodName" value="" />
@@ -730,21 +731,19 @@
     <inspection_tool class="LoopWithImplicitTerminationCondition" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="LossyEncoding" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="MagicCharacter" enabled="true" level="WARNING" enabled_by_default="true" />
-    <inspection_tool class="MagicNumber" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="ignoreInHashCode" value="true" />
-      <option name="ignoreInTestCode" value="false" />
-      <option name="ignoreInAnnotations" value="true" />
-    </inspection_tool>
+    <inspection_tool class="MagicNumber" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="MagicNumberJS" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="MapReplaceableByEnumMap" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="MarkerInterface" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="MethodCallInLoopCondition" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="MethodCanBeVariableArityMethod" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoreByteAndShortArrayParameters" value="false" />
+      <option name="ignoreOverridingMethods" value="false" />
     </inspection_tool>
     <inspection_tool class="MethodCount" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="m_limit" value="20" />
       <option name="ignoreGettersAndSetters" value="false" />
+      <option name="ignoreOverridingMethods" value="false" />
     </inspection_tool>
     <inspection_tool class="MethodCoupling" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="m_includeJavaClasses" value="false" />
@@ -997,10 +996,10 @@
       <option name="ignoreInterfaces" value="false" />
     </inspection_tool>
     <inspection_tool class="PublicMethodNotExposedInInterface" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="onlyWarnIfContainingClassImplementsAnInterface" value="false" />
       <option name="ignorableAnnotations">
         <value />
       </option>
+      <option name="onlyWarnIfContainingClassImplementsAnInterface" value="false" />
     </inspection_tool>
     <inspection_tool class="PublicMethodWithoutLogging" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="loggerClassName" value="" />
@@ -1024,11 +1023,7 @@
       <option name="SAFARI" value="true" />
     </inspection_tool>
     <inspection_tool class="RandomDoubleForRandomInteger" enabled="true" level="WARNING" enabled_by_default="true" />
-    <inspection_tool class="RawUseOfParameterizedType" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="ignoreObjectConstruction" value="true" />
-      <option name="ignoreTypeCasts" value="false" />
-      <option name="ignoreUncompilable" value="false" />
-    </inspection_tool>
+    <inspection_tool class="RawUseOfParameterizedType" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="ReadObjectAndWriteObjectPrivate" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="ReadObjectInitialization" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="ReadResolveAndWriteReplaceProtected" enabled="true" level="WARNING" enabled_by_default="true" />
@@ -1109,11 +1104,6 @@
     <inspection_tool class="SocketResource" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="insideTryAllowed" value="false" />
     </inspection_tool>
-    <inspection_tool class="SqlAmbiguousColumnInspection" enabled="true" level="WARNING" enabled_by_default="true" />
-    <inspection_tool class="SqlIdentifierInspection" enabled="true" level="WARNING" enabled_by_default="true" />
-    <inspection_tool class="SqlInsertValuesInspection" enabled="true" level="WARNING" enabled_by_default="true" />
-    <inspection_tool class="SqlResolveInspection" enabled="true" level="WARNING" enabled_by_default="true" />
-    <inspection_tool class="SqlTypeInspection" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="StandardVariableNames" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="StatementsPerFunctionJS" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="m_limit" value="30" />
@@ -1158,6 +1148,7 @@
       <option name="ignoreThrowableArguments" value="false" />
       <option name="ignoreConstantInitializers" value="false" />
       <option name="ignoreInTestCode" value="false" />
+      <option name="ignoreInToString" value="false" />
     </inspection_tool>
     <inspection_tool class="StringConcatenationInFormatCall" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="StringConcatenationInLoops" enabled="true" level="WARNING" enabled_by_default="true">
@@ -1313,7 +1304,6 @@
       <option name="ignoreParenthesesOnConditionals" value="false" />
       <option name="ignoreParenthesesOnLambdaParameter" value="false" />
     </inspection_tool>
-    <inspection_tool class="UnnecessaryQualifiedReference" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="UnnecessaryQualifierForThis" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="UnnecessarySuperConstructor" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="UnnecessarySuperQualifier" enabled="true" level="WARNING" enabled_by_default="true" />
@@ -1362,10 +1352,10 @@
     </inspection_tool>
     <inspection_tool class="UtilityClassWithPublicConstructor" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="UtilityClassWithoutPrivateConstructor" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="ignoreClassesWithOnlyMain" value="false" />
       <option name="ignorableAnnotations">
         <value />
       </option>
+      <option name="ignoreClassesWithOnlyMain" value="false" />
     </inspection_tool>
     <inspection_tool class="VarargParameter" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="VariableNotUsedInsideIf" enabled="true" level="WARNING" enabled_by_default="true" />
